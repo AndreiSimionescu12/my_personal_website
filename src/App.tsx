@@ -78,6 +78,13 @@ function App() {
     setModalIsOpen(true);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
       {/* Spotlight Effect */}
@@ -96,10 +103,10 @@ function App() {
             <span className="font-semibold text-xl bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Andrei Simionescu</span>
           </div>
           <div className="flex space-x-4">
-            <a href="#despre" className="text-gray-400 hover:text-purple-400 transition-colors">Despre</a>
-            <a href="#competente" className="text-gray-400 hover:text-purple-400 transition-colors">Competențe</a>
-            <a href="#proiecte" className="text-gray-400 hover:text-purple-400 transition-colors">Proiecte</a>
-            <a href="#contact" className="text-gray-400 hover:text-purple-400 transition-colors">Contact</a>
+            <button onClick={() => scrollToSection('despre')} className="text-gray-400 hover:text-purple-400 transition-colors">Despre</button>
+            <button onClick={() => scrollToSection('competente')} className="text-gray-400 hover:text-purple-400 transition-colors">Competențe</button>
+            <button onClick={() => scrollToSection('proiecte')} className="text-gray-400 hover:text-purple-400 transition-colors">Proiecte</button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-purple-400 transition-colors">Contact</button>
           </div>
         </nav>
       </header>
