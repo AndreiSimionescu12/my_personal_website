@@ -93,7 +93,7 @@ function App() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <User className="w-6 h-6 text-purple-500" />
-            <span className="font-semibold text-xl bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Portofoliu Personal</span>
+            <span className="font-semibold text-xl bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Andrei Simionescu</span>
           </div>
           <div className="flex space-x-4">
             <a href="#despre" className="text-gray-400 hover:text-purple-400 transition-colors">Despre</a>
@@ -128,15 +128,13 @@ function App() {
               <p className="text-purple-400 text-lg mb-12">Full Stack Developer & RPA Developer</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="relative">
-                  <img
-                    src="/images/profile.jpg"
-                    alt="Profil"
-                    className="w-72 h-72 rounded-full object-cover object-top shadow-lg ring-4 ring-purple-500/50 mx-auto"
+                <div className="relative w-48 h-48 mx-auto mb-8">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
+                  <img 
+                    src="/images/profile.jpg" 
+                    alt="Andrei Simionescu" 
+                    className="relative w-full h-full object-cover rounded-full border-4 border-gray-900"
                   />
-                  <div className="absolute -bottom-4 -right-4 bg-purple-500 p-3 rounded-full">
-                    <Code className="w-6 h-6 text-white" />
-                  </div>
                 </div>
                 
                 <div className="space-y-6 text-left">
@@ -323,10 +321,10 @@ function App() {
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Responsabilități:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Dezvoltarea și întreținerea aplicațiilor web folosind React și Node.js</li>
+                          <li>Dezvoltarea și întreținerea aplicațiilor web folosind YII2 framework</li>
                           <li>Implementarea de funcționalități complexe și optimizarea performanței</li>
                           <li>Colaborarea cu echipa de design pentru implementarea interfețelor utilizator</li>
-                          <li>Dezvoltarea și integrarea API-urilor RESTful</li>
+                          <li>Dezvoltarea și integrarea API-urilor</li>
                           <li>Gestionarea bazelor de date și optimizarea interogărilor</li>
                         </ul>
                       </div>
@@ -334,22 +332,25 @@ function App() {
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Realizări:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Reducerea timpului de încărcare al aplicației cu 40% prin optimizări</li>
-                          <li>Implementarea unui sistem de caching care a îmbunătățit performanța cu 60%</li>
-                          <li>Dezvoltarea unui sistem de autentificare și autorizare robust</li>
-                          <li>Integrarea unui sistem de plăți online care a crescut conversia cu 25%</li>
+                          <li>Implementarea unui sistem de adminstrare a proiectelor aflate in executie.</li>
+                          <li>Implementarea unui sistem de gestiune a activităților realizate de către echipa de suport.</li>
+                          <li>Dezvoltarea si implementarea unui proces de automatizare a activităților de suport folosind Robotics Power Automate.</li>
+                          <li>Imbunătățirea aplicațiilor web existente în cadrul ERP-ului.</li>
                         </ul>
                       </div>
 
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Tehnologii:</h4>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">React</span>
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Node.js</span>
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">TypeScript</span>
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">PostgreSQL</span>
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Docker</span>
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">AWS</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Yii2 Framework</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">PHP</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">JavaScript</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">MySQL</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">MariaDB</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Robotics Power Automate</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">HTML</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">CSS</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Bootstrap</span>
                         </div>
                       </div>
                     </div>
@@ -376,18 +377,18 @@ function App() {
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Responsabilități:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
+                          <li>Realizarea unei aplicatii de amangement a proiectelor dezvoltate in cadrul companiei</li>
                           <li>Dezvoltarea interfețelor utilizator responsive folosind React</li>
-                          <li>Implementarea de componente reutilizabile și optimizarea codului</li>
+                          <li>Implementarea de componente reutilizabile</li>
                           <li>Colaborarea cu echipa de backend pentru integrarea API-urilor</li>
-                          <li>Participarea la code reviews și îmbunătățirea practicilor de dezvoltare</li>
                         </ul>
                       </div>
 
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Realizări:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Dezvoltarea unui sistem de componente UI care a redus timpul de dezvoltare cu 30%</li>
-                          <li>Implementarea unui sistem de teme care a îmbunătățit experiența utilizatorului</li>
+                          <li>Realizarea frontend-ului pentru aplicatia de management a proiectelor din cadrul companiei</li>
+                          <li>Realizarea unui frontend responsive pentru aplicatia de management a proiectelor</li>
                           <li>Optimizarea performanței aplicației prin implementarea lazy loading</li>
                         </ul>
                       </div>
