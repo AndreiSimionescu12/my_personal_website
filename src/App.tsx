@@ -110,11 +110,12 @@ function App() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              <span className="block text-white">Bine ați venit pe</span>
-              <span className="block bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Site-ul Meu Personal</span>
+              <span className="block text-white">Salut, sunt</span>
+              <span className="block bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Andrei</span>
+              <span className="block text-gray-300 mt-2">Dezvoltator software</span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-400 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Developer Pasionat & Creator de Soluții Digitale
+              Construiesc aplicații moderne și performante
             </p>
           </div>
         </section>
@@ -124,7 +125,7 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
               <h2 className="text-3xl font-bold text-white mb-4">Despre Mine</h2>
-              <p className="text-purple-400 text-lg mb-12">Full Stack Developer & Tech Enthusiast</p>
+              <p className="text-purple-400 text-lg mb-12">Full Stack Developer & RPA Developer</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="relative">
@@ -141,12 +142,12 @@ function App() {
                 <div className="space-y-6 text-left">
                   <div className="space-y-4">
                     <p className="text-gray-300 text-lg leading-relaxed">
-                      Sunt un dezvoltator software pasionat cu experiență în crearea de aplicații web moderne și intuitive. 
+                      Sunt un dezvoltator software pasionat cu experiență în crearea de aplicații complexe pentru multiple platforme. 
                       Cu o abordare centrată pe utilizator și atenție la detalii, transform idei complexe în soluții elegante și eficiente.
                     </p>
                     <p className="text-gray-300 text-lg leading-relaxed">
-                      Specializat în dezvoltarea full-stack, combin tehnologiile frontend moderne cu arhitecturi backend robuste 
-                      pentru a crea aplicații scalabile și performante.
+                      Specializat în dezvoltarea de aplicații web, mobile și desktop, combin tehnologiile moderne cu arhitecturi robuste 
+                      pentru a crea soluții scalabile și performante care răspund nevoilor diverse ale clienților.
                     </p>
                   </div>
 
@@ -164,19 +165,19 @@ function App() {
                   <div className="flex flex-wrap gap-4 pt-4">
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-400">Dezvoltare Web Modernă</span>
+                      <span className="text-gray-400">Dezvoltare Web</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-400">Arhitectură Scalabilă</span>
+                      <span className="text-gray-400">Automatizare Procese</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-400">Optimizare Performanță</span>
+                      <span className="text-gray-400">Cloud & DevOps</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-400">Best Practices</span>
+                      <span className="text-gray-400">Baze de Date</span>
                     </div>
                   </div>
 
@@ -202,95 +203,95 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
                 <h3 className="text-xl font-semibold mb-4 text-white">Frontend Development</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">React</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[90%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">React</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">TypeScript</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[85%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">CSS</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Tailwind CSS</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[95%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Bootstrap</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Tailwind CSS</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Responsive Design</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">SCSS</span>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
                 <h3 className="text-xl font-semibold mb-4 text-white">Backend Development</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Node.js</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[88%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Node.js & Express</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Express</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[82%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">RESTful APIs</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">PostgreSQL</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[85%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">MySQL & MariaDB</span>
                   </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
-                <h3 className="text-xl font-semibold mb-4 text-white">DevOps & Tools</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Git</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[92%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">C#</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Docker</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[75%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">PHP</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">AWS</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[70%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">YII2 Framework</span>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
-                <h3 className="text-xl font-semibold mb-4 text-white">Soft Skills</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Team Work</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[95%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">DevOps</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Git & GitHub</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Communication</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[90%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Docker</span>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Problem Solving</span>
-                    <div className="w-32 h-2 bg-gray-700 rounded-full">
-                      <div className="w-[88%] h-full bg-purple-500 rounded-full"></div>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Bash</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
+                <h3 className="text-xl font-semibold mb-4 text-white">Alte Competențe</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">RPA Development</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">Testare Automată</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-gray-300">RedMine</span>
                   </div>
                 </div>
               </div>
