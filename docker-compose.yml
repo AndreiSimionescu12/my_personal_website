@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:80"
+    volumes:
+      - ./images:/usr/share/nginx/html/images
+    restart: unless-stopped 
