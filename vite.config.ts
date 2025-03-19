@@ -7,4 +7,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    host: true, // Permite accesul din rețea
+    port: 5173, // Portul implicit Vite
+  },
 });

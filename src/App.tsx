@@ -135,7 +135,7 @@ function App() {
               <p className="text-purple-400 text-lg mb-12">Full Stack Developer & RPA Developer</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="relative w-48 h-48 mx-auto mb-8">
+                <div className="relative w-64 h-64 mx-auto mb-8">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
                   <img 
                     src="images/profile.jpg" 
