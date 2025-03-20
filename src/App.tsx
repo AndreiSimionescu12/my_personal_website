@@ -48,14 +48,14 @@ function App() {
     },
     {
       id: 2,
-      title: "Dashboard Analytics",
-      description: "Dashboard interactiv pentru vizualizarea și analiza datelor",
-      fullDescription: "Dashboard complex pentru analiza datelor în timp real, cu grafice interactive, rapoarte personalizabile și sistem de alertare. Oferă insights valoroase pentru decizii de business.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      title: "Aplicație de gestiune taskuri",
+      description: "Gestionarea, monitorizarea și organizarea eficientă a taskurilor.",
+      fullDescription: "Aplicația ta de gestionare a taskurilor oferă organizare eficientă și claritate în activități. Permite atribuirea, monitorizarea și prioritizarea sarcinilor într-un mod intuitiv. Ideală pentru echipe sau utilizatori individuali care vor productivitate maximă.",
+      image: "images/personal-projects/project_2_preview.jpg",
       screenshots: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+        "images/personal-projects/project_2.1.jpeg",
+        "images/personal-projects/project_2.2.jpeg",
+        "images/personal-projects/project_2.3.jpeg"
       ],
       technologies: ["React", "D3.js", "Firebase", "Material-UI"]
     },
@@ -526,7 +526,7 @@ function App() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className={`w-full h-48 ${project.id === 2 ? 'object-contain bg-gray-800' : 'object-cover'}`}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
@@ -550,15 +550,33 @@ function App() {
         <section id="contact" className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-white mb-12">Contact</h2>
+            <div className="text-center mb-8">
+              <p className="text-gray-300 text-lg mb-4">
+                Ai nevoie de o aplicație web modernă și performantă pentru afacerea ta?
+              </p>
+              <p className="text-gray-300 text-lg mb-8">
+                Sunt disponibil pentru dezvoltarea de aplicații web personalizate, sisteme de management și soluții software la comandă.
+                Contactează-mă pentru o discuție despre proiectul tău!
+              </p>
+              <div className="flex flex-col items-center space-y-4 mb-8">
+                <a href="tel:+40751234567" className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span className="text-lg">+40 755 526 038</span>
+                </a>
+                <a href="mailto:andrei.simionescu@example.com" className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
+                  <Mail className="w-6 h-6" />
+                  <span className="text-lg">andreisimionescu2000@gmail.com</span>
+                </a>
+              </div>
+            </div>
             <div className="flex justify-center space-x-8">
               <a href="https://github.com/AndreiSimionescu12" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Github className="w-8 h-8" />
               </a>
               <a href="https://www.linkedin.com/in/gavril-andrei-simionescu-75a348285/" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Linkedin className="w-8 h-8" />
-              </a>
-              <a href="mailto:contact@example.com" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <Mail className="w-8 h-8" />
               </a>
             </div>
           </div>
@@ -574,8 +592,19 @@ function App() {
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
-          className="max-w-4xl mx-auto mt-20 bg-gray-900/95 backdrop-blur-sm p-8 rounded-lg border border-gray-800 shadow-xl relative"
+          className="fixed top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-4xl bg-gray-900/95 backdrop-blur-sm p-8 rounded-lg border border-gray-800 shadow-xl"
           overlayClassName="fixed inset-0 bg-black/80 backdrop-blur-sm"
+          style={{
+            content: {
+              maxHeight: 'calc(100vh - 180px)',
+              marginTop: '60px',
+              overflow: 'auto'
+            },
+            overlay: {
+              zIndex: 40,
+              overflow: 'hidden'
+            }
+          }}
         >
           {selectedProject && (
             <div>
@@ -592,11 +621,11 @@ function App() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 {selectedProject.screenshots.map((screenshot, index) => (
-                  <div key={index} className="relative group cursor-pointer" onClick={() => openImageModal(screenshot)}>
+                  <div key={index} className="relative group cursor-pointer aspect-video" onClick={() => openImageModal(screenshot)}>
                     <img
                       src={screenshot}
                       alt={`Screenshot ${index + 1}`}
-                      className="rounded-lg shadow-lg w-full h-full object-cover"
+                      className={`rounded-lg shadow-lg w-full h-full ${selectedProject.id === 2 ? 'object-contain bg-gray-800' : 'object-cover'}`}
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                       <div className="text-white text-center p-4">
@@ -631,8 +660,19 @@ function App() {
         <Modal
           isOpen={selectedImage !== null}
           onRequestClose={closeImageModal}
-          className="max-w-2xl mx-auto mt-20 bg-gray-900/95 backdrop-blur-sm p-4 rounded-lg border border-gray-800 shadow-xl relative"
+          className="fixed top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-4xl bg-gray-900/95 backdrop-blur-sm p-4 rounded-lg border border-gray-800 shadow-xl"
           overlayClassName="fixed inset-0 bg-black/80 backdrop-blur-sm"
+          style={{
+            content: {
+              maxHeight: 'calc(100vh - 180px)',
+              marginTop: '60px',
+              overflow: 'auto'
+            },
+            overlay: {
+              zIndex: 40,
+              overflow: 'hidden'
+            }
+          }}
         >
           {selectedImage && (
             <div className="relative">
@@ -647,7 +687,7 @@ function App() {
               <img
                 src={selectedImage}
                 alt="Imagine mărită"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className={`w-full h-auto max-h-[calc(100vh-180px)] ${selectedImage.includes('project_2') ? 'object-contain bg-gray-800' : 'object-cover'} rounded-lg shadow-lg`}
               />
             </div>
           )}
