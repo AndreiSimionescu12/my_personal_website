@@ -18,6 +18,7 @@ function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -34,16 +35,16 @@ function App() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Aplicație Web E-commerce",
-      description: "O platformă modernă de comerț electronic construită cu React și Node.js",
-      fullDescription: "Platformă completă de e-commerce cu sistem de gestionare a produselor, coș de cumpărături, procesare plăți și panou de administrare. Implementează cele mai bune practici de UI/UX și oferă o experiență de cumpărare fluidă.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      title: "Aplicație de gestiune a unei clinici de stomatologie",
+      description: "Platformă modernă pentru programări, gestionare medici, pacienți și orar stomatologic.",
+      fullDescription: "Platforma digitalizează complet procesul de programare pentru medicii stomatologi, oferind o gestionare eficientă a medicilor, pacienților și programărilor. Pacienții pot rezerva online consultații în funcție de disponibilitatea medicilor, iar clinica poate administra ușor orarul, notificările și istoricul pacienților. Totul este intuitiv, rapid și optimizat pentru nevoile cabinetelor stomatologice moderne.",
+      image: "images/personal-projects/project_1.2.jpg",
       screenshots: [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=800&q=80"
+        "images/personal-projects/project_1.2.jpg",
+        "images/personal-projects/project_1.1.jpg",
+        "images/personal-projects/project_1.3.jpg"
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redux"]
+      technologies: ["React", "Node.js", "MySQL", "HTML", "Bootstrap"]
     },
     {
       id: 2,
@@ -76,6 +77,14 @@ function App() {
   const openModal = (project: Project) => {
     setSelectedProject(project);
     setModalIsOpen(true);
+  };
+
+  const openImageModal = (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+  };
+
+  const closeImageModal = () => {
+    setSelectedImage(null);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -441,28 +450,16 @@ function App() {
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Specializări:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Arhitecturi Avansate de Rețele</li>
-                          <li>Securitate în Rețele</li>
-                          <li>Cloud Computing și Virtualizare</li>
-                          <li>Internet of Things (IoT)</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-medium text-white mb-2">Proiecte de Cercetare:</h4>
-                        <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Dezvoltarea unui sistem de monitorizare a rețelelor IoT</li>
-                          <li>Implementarea unui framework de securitate pentru rețele cloud</li>
-                          <li>Optimizarea performanței rețelelor 5G</li>
+                          <li>Rețele de comunicații și calculatoare</li>
                         </ul>
                       </div>
 
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Realizări:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Media generală: 9.45/10</li>
-                          <li>Participare la conferințe naționale și internaționale</li>
-                          <li>Publicare de articole în reviste de specialitate</li>
+                          <li>Dezvoltarea unui sistem de monitorizare a rețelelor IoT</li>
+                          <li>Sistem de detectare a mișcării cu control Wireless</li>
+                          <li>Configurarea rețelelor de telefonie VoIP cu telefoane IP</li>
                         </ul>
                       </div>
                     </div>
@@ -488,45 +485,27 @@ function App() {
                     <div className="mt-4 space-y-4">
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Specializare:</h4>
-                        <p className="text-gray-300">Calculatoare și Tehnologia Informației</p>
+                        <p className="text-gray-300">Calculatoare și tehnologia Informației</p>
                       </div>
 
                       <div>
-                        <h4 className="text-lg font-medium text-white mb-2">Cursuri Relevante:</h4>
+                        <h4 className="text-lg font-medium text-white mb-2">Cursuri relevante:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Programare Avansată</li>
-                          <li>Arhitectura Calculatoarelor</li>
-                          <li>Baze de Date</li>
-                          <li>Rețele de Calculatoare</li>
-                          <li>Sisteme de Operare</li>
+                          <li>Programare orientată pe obiect</li>
+                          <li>Arhitectura calculatoarelor</li>
+                          <li>Baze de date</li>
+                          <li>Rețele de calculatoare</li>
+                          <li>Sisteme de operare</li>
                           <li>Securitate Informatică</li>
                         </ul>
                       </div>
 
                       <div>
-                        <h4 className="text-lg font-medium text-white mb-2">Proiecte Semnificative:</h4>
+                        <h4 className="text-lg font-medium text-white mb-2">Proiecte semnificative:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
                           <li>Dezvoltarea unui sistem de management al bibliotecii</li>
-                          <li>Implementarea unui simulator de rețele</li>
-                          <li>Crearea unui sistem de monitorizare a performanței</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-medium text-white mb-2">Activitate Extracurriculară:</h4>
-                        <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Membru al clubului de programare</li>
-                          <li>Participare la hackathoane și competiții de programare</li>
-                          <li>Voluntariat în proiecte educaționale</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-medium text-white mb-2">Realizări Academice:</h4>
-                        <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Media generală: 9.20/10</li>
-                          <li>Locul 1 în competiția de programare a facultății</li>
-                          <li>Bursă de merit în toți anii de studiu</li>
+                          <li>Implementarea unei aplicații de gestiune a angajaților</li>
+                          <li>Realizarea unui cartier 3D</li>
                         </ul>
                       </div>
                     </div>
@@ -572,10 +551,10 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-white mb-12">Contact</h2>
             <div className="flex justify-center space-x-8">
-              <a href="https://github.com" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://github.com/AndreiSimionescu12" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Github className="w-8 h-8" />
               </a>
-              <a href="https://linkedin.com" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.linkedin.com/in/gavril-andrei-simionescu-75a348285/" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Linkedin className="w-8 h-8" />
               </a>
               <a href="mailto:contact@example.com" className="text-gray-400 hover:text-purple-400 transition-colors">
@@ -588,29 +567,46 @@ function App() {
         {/* Footer */}
         <footer className="bg-black/40 backdrop-blur-sm border-t border-gray-800 text-gray-400 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center hover:text-purple-400 transition-colors">
-            <p>© 2024 Site Personal. Toate drepturile rezervate.</p>
+            <p>© 2024 Andrei Simionescu. Toate drepturile rezervate.</p>
           </div>
         </footer>
 
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
-          className="max-w-4xl mx-auto mt-20 bg-gray-900/95 backdrop-blur-sm p-8 rounded-lg border border-gray-800 shadow-xl"
+          className="max-w-4xl mx-auto mt-20 bg-gray-900/95 backdrop-blur-sm p-8 rounded-lg border border-gray-800 shadow-xl relative"
           overlayClassName="fixed inset-0 bg-black/80 backdrop-blur-sm"
         >
           {selectedProject && (
             <div>
+              <button
+                onClick={() => setModalIsOpen(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
               <h2 className="text-3xl font-bold text-white mb-4">{selectedProject.title}</h2>
               <p className="text-gray-300 mb-6">{selectedProject.fullDescription}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 {selectedProject.screenshots.map((screenshot, index) => (
-                  <img
-                    key={index}
-                    src={screenshot}
-                    alt={`Screenshot ${index + 1}`}
-                    className="rounded-lg shadow-lg"
-                  />
+                  <div key={index} className="relative group cursor-pointer" onClick={() => openImageModal(screenshot)}>
+                    <img
+                      src={screenshot}
+                      alt={`Screenshot ${index + 1}`}
+                      className="rounded-lg shadow-lg w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                      <div className="text-white text-center p-4">
+                        <svg className="w-8 h-8 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <span className="font-medium">Vezi imaginea</span>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
 
@@ -627,13 +623,32 @@ function App() {
                   ))}
                 </div>
               </div>
+            </div>
+          )}
+        </Modal>
 
+        {/* Image Modal */}
+        <Modal
+          isOpen={selectedImage !== null}
+          onRequestClose={closeImageModal}
+          className="max-w-2xl mx-auto mt-20 bg-gray-900/95 backdrop-blur-sm p-4 rounded-lg border border-gray-800 shadow-xl relative"
+          overlayClassName="fixed inset-0 bg-black/80 backdrop-blur-sm"
+        >
+          {selectedImage && (
+            <div className="relative">
               <button
-                onClick={() => setModalIsOpen(false)}
-                className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
+                onClick={closeImageModal}
+                className="absolute -top-3 -right-3 bg-gray-900 rounded-full p-1 text-white hover:text-gray-300 transition-colors z-10 border border-gray-800"
               >
-                Închide
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
+              <img
+                src={selectedImage}
+                alt="Imagine mărită"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
             </div>
           )}
         </Modal>
