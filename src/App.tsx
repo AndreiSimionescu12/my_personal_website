@@ -19,6 +19,7 @@ function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -111,13 +112,76 @@ function App() {
             <User className="w-6 h-6 text-purple-500" />
             <span className="font-semibold text-xl bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Andrei Simionescu</span>
           </div>
-          <div className="flex space-x-4">
+          
+          {/* Mobile menu button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-gray-400 hover:text-purple-400 transition-colors"
+          >
+            <svg 
+              className="w-6 h-6" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
+          {/* Desktop menu */}
+          <div className="hidden md:flex space-x-4">
             <button onClick={() => scrollToSection('despre')} className="text-gray-400 hover:text-purple-400 transition-colors">Despre</button>
             <button onClick={() => scrollToSection('competente')} className="text-gray-400 hover:text-purple-400 transition-colors">Competențe</button>
             <button onClick={() => scrollToSection('proiecte')} className="text-gray-400 hover:text-purple-400 transition-colors">Proiecte</button>
             <button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-purple-400 transition-colors">Contact</button>
           </div>
         </nav>
+
+        {/* Mobile menu */}
+        <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-gray-900/95 backdrop-blur-sm border-b border-gray-800`}>
+          <div className="px-4 py-3 space-y-2">
+            <button 
+              onClick={() => {
+                scrollToSection('despre');
+                setIsMenuOpen(false);
+              }} 
+              className="block w-full text-left px-3 py-2 text-gray-400 hover:text-purple-400 hover:bg-gray-800/50 rounded-lg transition-colors"
+            >
+              Despre
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('competente');
+                setIsMenuOpen(false);
+              }} 
+              className="block w-full text-left px-3 py-2 text-gray-400 hover:text-purple-400 hover:bg-gray-800/50 rounded-lg transition-colors"
+            >
+              Competențe
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('proiecte');
+                setIsMenuOpen(false);
+              }} 
+              className="block w-full text-left px-3 py-2 text-gray-400 hover:text-purple-400 hover:bg-gray-800/50 rounded-lg transition-colors"
+            >
+              Proiecte
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('contact');
+                setIsMenuOpen(false);
+              }} 
+              className="block w-full text-left px-3 py-2 text-gray-400 hover:text-purple-400 hover:bg-gray-800/50 rounded-lg transition-colors"
+            >
+              Contact
+            </button>
+          </div>
+        </div>
       </header>
 
       {/* Add padding to account for fixed header */}
