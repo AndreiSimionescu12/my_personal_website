@@ -62,14 +62,13 @@ function App() {
     },
     {
       id: 3,
-      title: "Sistem de Management al Învățării",
-      description: "Platformă educațională completă pentru cursuri online",
-      fullDescription: "Sistem complex de management al învățării cu suport pentru cursuri video, teste interactive, forum de discuții și tracking al progresului. Facilitează învățarea la distanță și interacțiunea între profesori și studenți.",
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80",
+      title: "Sistem de management al proiectelor",
+      description: "Management simplu și eficient pentru organizarea proiectelor",
+      fullDescription: "Această aplicație este un manager de proiecte simplu și eficient. Te ajută să organizezi și să urmărești toate proiectele tale într-un singur loc. Poți adăuga proiecte noi, să le atribui echipe, să setezi deadline-uri și să vezi progresul fiecăruia, toate într-o interfață prietenoasă și ușor de folosit.",
+      image: "images/personal-projects/project_3.1.jpg",
       screenshots: [
-        "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80"
+        "images/personal-projects/project_3.1.jpg",
+        "images/personal-projects/project_3.2.jpg",
       ],
       technologies: ["Next.js", "PostgreSQL", "WebRTC", "Socket.io"]
     }
@@ -204,16 +203,16 @@ function App() {
         <section id="despre" className="bg-black/40 backdrop-blur-sm border-y border-gray-800 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">Despre Mine</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Despre mine</h2>
               <p className="text-purple-400 text-lg mb-12">Full Stack Developer & RPA Developer</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="relative w-64 h-64 mx-auto mb-8">
+                <div className="relative w-80 h-80 mx-auto mb-8">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
                   <img 
                     src="images/profile.jpg" 
                     alt="Andrei Simionescu" 
-                    className="relative w-full h-full object-cover rounded-full border-4 border-gray-900"
+                    className="relative w-full h-full object-cover rounded-full border-4 border-gray-900 object-top"
                   />
                 </div>
                 
