@@ -55,7 +55,7 @@ function App() {
     {
       id: 2,
       title: "Aplicație de gestiune a taskurilor",
-      description: "Un dashboard interactiv pentru vizualizarea și analiza datelor, cu funcționalități de filtrare și export.",
+      description: "Aplicația de gestiune a taskurilor oferă organizare eficientă.",
       fullDescription: "Aplicația de gestiune a taskurilor oferă organizare eficientă și claritate în activități. Permite atribuirea, monitorizarea și prioritizarea sarcinilor într-un mod intuitiv. Ideală pentru echipe sau utilizatori individuali care vor productivitate maximă.",
       image: "/images/personal-projects/project_2_preview.jpg",
       screenshots: [
@@ -68,7 +68,7 @@ function App() {
     {
       id: 3,
       title: "Aplicație de management a proiectelor",
-      description: "O platformă completă pentru gestionarea rezervărilor, cu autentificare și rol-uri de utilizator.",
+      description: "Aplicația optimizează gestionarea taskurilor pentru echipe și utilizatori individuali.",
       fullDescription: "Această aplicație este un manager de proiecte simplu și eficient. Te ajută să organizezi și să urmărești toate proiectele tale într-un singur loc. Poți adăuga proiecte noi, să le atribui echipe, să setezi deadline-uri și să vezi progresul fiecăruia, toate într-o interfață prietenoasă și ușor de folosit.",
       image: "/images/personal-projects/project_3.1.jpg",
       screenshots: [
