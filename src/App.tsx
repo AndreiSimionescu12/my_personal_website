@@ -41,41 +41,41 @@ function App() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Aplicație de gestiune a unei clinici de stomatologie",
-      description: "Platformă modernă pentru programări, gestionare medici, pacienți și orar stomatologic.",
+      title: "Aplicație de Gestionare a Sarcinilor",
+      description: "O aplicație web pentru gestionarea și organizarea sarcinilor, dezvoltată folosind React și TypeScript.",
       fullDescription: "Platforma digitalizează complet procesul de programare pentru medicii stomatologi, oferind o gestionare eficientă a medicilor, pacienților și programărilor. Pacienții pot rezerva online consultații în funcție de disponibilitatea medicilor, iar clinica poate administra ușor orarul, notificările și istoricul pacienților. Totul este intuitiv, rapid și optimizat pentru nevoile cabinetelor stomatologice moderne.",
-      image: "images/personal-projects/project_1.2.jpg",
+      image: "/images/personal-projects/project_1.2.jpg",
       screenshots: [
-        "images/personal-projects/project_1.2.jpg",
-        "images/personal-projects/project_1.1.jpg",
-        "images/personal-projects/project_1.3.jpg"
+        "/images/personal-projects/project_1.2.jpg",
+        "/images/personal-projects/project_1.1.jpg",
+        "/images/personal-projects/project_1.3.jpg"
       ],
-      technologies: ["React", "Node.js", "MySQL", "HTML", "Bootstrap"]
+      technologies: ["React", "TypeScript", "Tailwind CSS"],
     },
     {
       id: 2,
-      title: "Aplicație de gestiune taskuri",
-      description: "Gestionarea, monitorizarea și organizarea eficientă a taskurilor.",
+      title: "Dashboard Analytics",
+      description: "Un dashboard interactiv pentru vizualizarea și analiza datelor, cu funcționalități de filtrare și export.",
       fullDescription: "Aplicația ta de gestionare a taskurilor oferă organizare eficientă și claritate în activități. Permite atribuirea, monitorizarea și prioritizarea sarcinilor într-un mod intuitiv. Ideală pentru echipe sau utilizatori individuali care vor productivitate maximă.",
-      image: "images/personal-projects/project_2_preview.jpg",
+      image: "/images/personal-projects/project_2_preview.jpg",
       screenshots: [
-        "images/personal-projects/project_2.1.jpeg",
-        "images/personal-projects/project_2.2.jpeg",
-        "images/personal-projects/project_2.3.jpeg"
+        "/images/personal-projects/project_2.1.jpeg",
+        "/images/personal-projects/project_2.2.jpeg",
+        "/images/personal-projects/project_2.3.jpeg"
       ],
-      technologies: ["React", "D3.js", "Firebase", "Material-UI"]
+      technologies: ["React", "Chart.js", "Material-UI"],
     },
     {
       id: 3,
-      title: "Sistem de management al proiectelor",
-      description: "Management simplu și eficient pentru organizarea proiectelor",
+      title: "Sistem de Rezervări",
+      description: "O platformă completă pentru gestionarea rezervărilor, cu autentificare și rol-uri de utilizator.",
       fullDescription: "Această aplicație este un manager de proiecte simplu și eficient. Te ajută să organizezi și să urmărești toate proiectele tale într-un singur loc. Poți adăuga proiecte noi, să le atribui echipe, să setezi deadline-uri și să vezi progresul fiecăruia, toate într-o interfață prietenoasă și ușor de folosit.",
-      image: "images/personal-projects/project_3.1.jpg",
+      image: "/images/personal-projects/project_3.1.jpg",
       screenshots: [
-        "images/personal-projects/project_3.1.jpg",
-        "images/personal-projects/project_3.2.jpg",
+        "/images/personal-projects/project_3.1.jpg",
+        "/images/personal-projects/project_3.2.jpg"
       ],
-      technologies: ["Next.js", "PostgreSQL", "WebRTC", "Socket.io"]
+      technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
     }
   ];
 
@@ -118,7 +118,7 @@ function App() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'd1f59434-5536-4e91-8b64-31c7026dc75d', // Înlocuiți cu cheia dvs de la Web3Forms
+          access_key: 'd1f59434-5536-4e91-8b64-31c7026dc75d',
           ...formData,
           subject: `Mesaj nou de la ${formData.name}`,
         }),
@@ -262,7 +262,7 @@ function App() {
                 <div className="relative w-80 h-80 mx-auto mb-8">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
                   <img 
-                    src="images/profile.jpg" 
+                    src="/images/profile.jpg" 
                     alt="Andrei Simionescu" 
                     className="relative w-full h-full object-cover rounded-full border-4 border-gray-900 object-top"
                   />
