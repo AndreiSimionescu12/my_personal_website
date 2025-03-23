@@ -54,9 +54,9 @@ function App() {
     },
     {
       id: 2,
-      title: "Dashboard Analytics",
+      title: "Aplicație de gestiune a taskurilor",
       description: "Un dashboard interactiv pentru vizualizarea și analiza datelor, cu funcționalități de filtrare și export.",
-      fullDescription: "Aplicația ta de gestionare a taskurilor oferă organizare eficientă și claritate în activități. Permite atribuirea, monitorizarea și prioritizarea sarcinilor într-un mod intuitiv. Ideală pentru echipe sau utilizatori individuali care vor productivitate maximă.",
+      fullDescription: "Aplicația de gestiune a taskurilor oferă organizare eficientă și claritate în activități. Permite atribuirea, monitorizarea și prioritizarea sarcinilor într-un mod intuitiv. Ideală pentru echipe sau utilizatori individuali care vor productivitate maximă.",
       image: "/images/personal-projects/project_2_preview.jpg",
       screenshots: [
         "/images/personal-projects/project_2.1.jpeg",
@@ -67,7 +67,7 @@ function App() {
     },
     {
       id: 3,
-      title: "Sistem de Rezervări",
+      title: "Aplicație de management a proiectelor",
       description: "O platformă completă pentru gestionarea rezervărilor, cu autentificare și rol-uri de utilizator.",
       fullDescription: "Această aplicație este un manager de proiecte simplu și eficient. Te ajută să organizezi și să urmărești toate proiectele tale într-un singur loc. Poți adăuga proiecte noi, să le atribui echipe, să setezi deadline-uri și să vezi progresul fiecăruia, toate într-o interfață prietenoasă și ușor de folosit.",
       image: "/images/personal-projects/project_3.1.jpg",
@@ -283,22 +283,22 @@ function App() {
                   <div className="grid grid-cols-2 gap-6 pt-4">
                     <div className="bg-gray-900/50 backdrop-blur-sm p-4 rounded-lg border border-gray-800">
                       <div className="text-3xl font-bold text-purple-400 mb-2">3+</div>
-                      <div className="text-gray-400">Ani de Experiență</div>
+                      <div className="text-gray-400">Ani de experiență</div>
                     </div>
                     <div className="bg-gray-900/50 backdrop-blur-sm p-4 rounded-lg border border-gray-800">
                       <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-                      <div className="text-gray-400">Proiecte Finalizate</div>
+                      <div className="text-gray-400">Proiecte finalizate</div>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-4 pt-4">
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-400">Dezvoltare Web</span>
+                      <span className="text-gray-400">Dezvoltare web</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-400">Automatizare Procese</span>
+                      <span className="text-gray-400">Automatizare procese</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
@@ -306,7 +306,7 @@ function App() {
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                      <span className="text-gray-400">Baze de Date</span>
+                      <span className="text-gray-400">Baze de date</span>
                     </div>
                   </div>
 
@@ -331,7 +331,7 @@ function App() {
             <h2 className="text-3xl font-bold text-center text-white mb-16">Competențe</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
-                <h3 className="text-xl font-semibold mb-4 text-white">Frontend Development</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Frontend development</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
@@ -360,7 +360,7 @@ function App() {
                 </div>
               </div>
               <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
-                <h3 className="text-xl font-semibold mb-4 text-white">Backend Development</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Backend development</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
@@ -368,11 +368,11 @@ function App() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-gray-300">RESTful APIs</span>
+                    <span className="text-gray-300">API</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-gray-300">MySQL & MariaDB</span>
+                    <span className="text-gray-300">MySQL</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
@@ -408,7 +408,7 @@ function App() {
               </div>
 
               <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 shadow-xl hover:border-purple-500/50 transition-colors">
-                <h3 className="text-xl font-semibold mb-4 text-white">Alte Competențe</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Alte competențe</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
@@ -416,11 +416,11 @@ function App() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-gray-300">Testare Automată</span>
+                    <span className="text-gray-300">Automated Testing</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="text-gray-300">RedMine</span>
+                    <span className="text-gray-300">Redmine</span>
                   </div>
                 </div>
               </div>
@@ -508,7 +508,7 @@ function App() {
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Responsabilități:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Realizarea unei aplicatii de amangement a proiectelor dezvoltate in cadrul companiei</li>
+                          <li>Realizarea unei aplicații de management a proiectelor dezvoltate in cadrul companiei</li>
                           <li>Dezvoltarea interfețelor utilizator responsive folosind React</li>
                           <li>Implementarea de componente reutilizabile</li>
                           <li>Colaborarea cu echipa de backend pentru integrarea API-urilor</li>
@@ -518,8 +518,8 @@ function App() {
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Realizări:</h4>
                         <ul className="list-disc list-inside space-y-2 text-gray-300">
-                          <li>Realizarea frontend-ului pentru aplicatia de management a proiectelor din cadrul companiei</li>
-                          <li>Realizarea unui frontend responsive pentru aplicatia de management a proiectelor</li>
+                          <li>Realizarea frontend-ului pentru aplicația de management a proiectelor din cadrul companiei</li>
+                          <li>Realizarea unui frontend responsive pentru aplicația de management a proiectelor</li>
                           <li>Optimizarea performanței aplicației prin implementarea lazy loading</li>
                         </ul>
                       </div>
@@ -529,7 +529,7 @@ function App() {
                         <div className="flex flex-wrap gap-2">
                           <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">React</span>
                           <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">JavaScript</span>
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">CSS/SASS</span>
+                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">HTML/CSS/SASS</span>
                           <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Git</span>
                         </div>
                       </div>
@@ -552,7 +552,7 @@ function App() {
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="text-xl font-semibold text-white">Master în Rețele de Calculatoare</h3>
+                        <h3 className="text-xl font-semibold text-white">Master în rețele de calculatoare</h3>
                         <p className="text-purple-400 font-medium">Universitatea "Ștefan cel Mare" din Suceava</p>
                       </div>
                       <div className="flex items-center text-gray-400">
@@ -588,7 +588,7 @@ function App() {
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="text-xl font-semibold text-white">Facultatea de Inginerie Electrică și Știința Calculatoarelor</h3>
+                        <h3 className="text-xl font-semibold text-white">Facultatea de inginerie electrică și știința calculatoarelor</h3>
                         <p className="text-purple-400 font-medium">Universitatea "Ștefan cel Mare" din Suceava</p>
                       </div>
                       <div className="flex items-center text-gray-400">
@@ -600,7 +600,7 @@ function App() {
                     <div className="mt-4 space-y-4">
                       <div>
                         <h4 className="text-lg font-medium text-white mb-2">Specializare:</h4>
-                        <p className="text-gray-300">Calculatoare și tehnologia Informației</p>
+                        <p className="text-gray-300">Calculatoare și tehnologia informației</p>
                       </div>
 
                       <div>
@@ -611,7 +611,7 @@ function App() {
                           <li>Baze de date</li>
                           <li>Rețele de calculatoare</li>
                           <li>Sisteme de operare</li>
-                          <li>Securitate Informatică</li>
+                          <li>Securitate informatică</li>
                         </ul>
                       </div>
 
@@ -667,10 +667,10 @@ function App() {
             <h2 className="text-3xl font-bold text-center text-white mb-12">Contact</h2>
             <div className="text-center mb-8">
               <p className="text-gray-300 text-lg mb-4">
-                Ai nevoie de o aplicație web modernă și performantă pentru afacerea ta?
+                Ai nevoie de o aplicație modernă și performantă pentru afacerea ta?
               </p>
               <p className="text-gray-300 text-lg mb-8">
-                Sunt disponibil pentru dezvoltarea de aplicații web personalizate, sisteme de management și soluții software la comandă.
+                Sunt disponibil pentru dezvoltarea de aplicații personalizate, sisteme de management și soluții software la comandă.
                 Contactează-mă pentru o discuție despre proiectul tău!
               </p>
               <div className="flex flex-col items-center space-y-4 mb-8">
