@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
-import { Github, Linkedin, Mail, User, Code, Briefcase, GraduationCap, Calendar, Building2, BookOpen } from 'lucide-react';
+import { Github, Linkedin, Mail, User, Code, Briefcase, GraduationCap, Calendar, Building2, BookOpen, Send } from 'lucide-react';
 
 Modal.setAppElement('#root');
 
@@ -20,6 +20,11 @@ function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -91,6 +96,53 @@ function App() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+    
+    const form = e.target as HTMLFormElement;
+    const formData = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    };
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'd1f59434-5536-4e91-8b64-31c7026dc75d', // Înlocuiți cu cheia dvs de la Web3Forms
+          ...formData,
+          subject: `Mesaj nou de la ${formData.name}`,
+        }),
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Mesajul a fost trimis cu succes! Vă voi contacta în curând.'
+        });
+        form.reset();
+      } else {
+        throw new Error('Eroare la trimitere');
+      }
+    } catch (error) {
+      console.error('Eroare:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'A apărut o eroare la trimiterea mesajului. Vă rugăm să încercați din nou.'
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -645,10 +697,116 @@ function App() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-black/40 backdrop-blur-sm border-t border-gray-800 text-gray-400 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center hover:text-purple-400 transition-colors">
-            <p>© 2024 Andrei Simionescu. Toate drepturile rezervate.</p>
+        {/* Footer with Contact Form */}
+        <footer className="bg-black/40 backdrop-blur-sm border-t border-gray-800 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-white mb-6">Trimite-mi un mesaj</h3>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                      Nume
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      required
+                      className="w-full px-4 py-2 bg-gray-900/50 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                      placeholder="Numele tău"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      required
+                      className="w-full px-4 py-2 bg-gray-900/50 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors"
+                      placeholder="email@exemplu.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
+                      Mesaj
+                    </label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      required
+                      rows={4}
+                      className="w-full px-4 py-2 bg-gray-900/50 border border-gray-800 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors resize-none"
+                      placeholder="Scrie mesajul tău aici..."
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="inline-flex items-center px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <span className="inline-flex items-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Se trimite...
+                      </span>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2" />
+                        Trimite mesajul
+                      </>
+                    )}
+                  </button>
+                  {submitStatus.type && (
+                    <div className={`mt-4 p-4 rounded-lg ${
+                      submitStatus.type === 'success' ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'
+                    }`}>
+                      {submitStatus.message}
+                    </div>
+                  )}
+                </form>
+              </div>
+
+              {/* Copyright and Social Links */}
+              <div className="space-y-8">
+                <div className="text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-white mb-4">Contact direct</h3>
+                  <div className="space-y-4">
+                    <a href="tel:+40755526038" className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span className="text-lg">+40 755 526 038</span>
+                    </a>
+                    <a href="mailto:andreisimionescu2000@gmail.com" className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
+                      <Mail className="w-6 h-6" />
+                      <span className="text-lg">andreisimionescu2000@gmail.com</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex justify-center md:justify-start space-x-8">
+                    <a href="https://github.com/AndreiSimionescu12" className="text-gray-400 hover:text-purple-400 transition-colors">
+                      <Github className="w-8 h-8" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/gavril-andrei-simionescu-75a348285/" className="text-gray-400 hover:text-purple-400 transition-colors">
+                      <Linkedin className="w-8 h-8" />
+                    </a>
+                  </div>
+                  <p className="text-center md:text-left text-gray-400 hover:text-purple-400 transition-colors">
+                    © 2024 Andrei Simionescu. Toate drepturile rezervate.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </footer>
 
@@ -685,9 +843,9 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 {selectedProject.screenshots.map((screenshot, index) => (
                   <div key={index} className="relative group cursor-pointer aspect-video" onClick={() => openImageModal(screenshot)}>
-                    <img
-                      src={screenshot}
-                      alt={`Screenshot ${index + 1}`}
+                  <img
+                    src={screenshot}
+                    alt={`Screenshot ${index + 1}`}
                       className={`rounded-lg shadow-lg w-full h-full ${selectedProject.id === 2 ? 'object-contain bg-gray-800' : 'object-cover'}`}
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
