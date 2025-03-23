@@ -41,16 +41,16 @@ function App() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Aplicație de Gestionare a Sarcinilor",
-      description: "O aplicație web pentru gestionarea și organizarea sarcinilor, dezvoltată folosind React și TypeScript.",
-      fullDescription: "Platforma digitalizează complet procesul de programare pentru medicii stomatologi, oferind o gestionare eficientă a medicilor, pacienților și programărilor. Pacienții pot rezerva online consultații în funcție de disponibilitatea medicilor, iar clinica poate administra ușor orarul, notificările și istoricul pacienților. Totul este intuitiv, rapid și optimizat pentru nevoile cabinetelor stomatologice moderne.",
+      title: "Platformă de gestiune a unei clinici stomatologice",
+      description: "O aplicație web pentru programarea consultațiilor în cabinetul stomatologic",
+      fullDescription: "Platforma digitalizează complet procesul de programare la medici stomatologi, oferind o gestionare eficientă a medicilor, pacienților și programărilor. Pacienții pot rezerva online consultații în funcție de disponibilitatea medicilor, iar clinica poate administra ușor orarul, notificările și istoricul pacienților. Totul este intuitiv, rapid și optimizat pentru nevoile cabinetelor stomatologice moderne.",
       image: "/images/personal-projects/project_1.2.jpg",
       screenshots: [
         "/images/personal-projects/project_1.2.jpg",
         "/images/personal-projects/project_1.1.jpg",
         "/images/personal-projects/project_1.3.jpg"
       ],
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      technologies: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MySQL", "Material UI"],
     },
     {
       id: 2,
