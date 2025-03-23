@@ -63,19 +63,19 @@ function App() {
         "/images/personal-projects/project_2.2.jpeg",
         "/images/personal-projects/project_2.3.jpeg"
       ],
-      technologies: ["React", "Chart.js", "Material-UI"],
+      technologies: ["React native"],
     },
     {
       id: 3,
       title: "Aplicație de management a proiectelor",
-      description: "Aplicația optimizează gestionarea taskurilor pentru echipe și utilizatori individuali.",
+      description: "Această aplicație este un manager de proiecte simplu și eficient.",
       fullDescription: "Această aplicație este un manager de proiecte simplu și eficient. Te ajută să organizezi și să urmărești toate proiectele tale într-un singur loc. Poți adăuga proiecte noi, să le atribui echipe, să setezi deadline-uri și să vezi progresul fiecăruia, toate într-o interfață prietenoasă și ușor de folosit.",
       image: "/images/personal-projects/project_3.1.jpg",
       screenshots: [
         "/images/personal-projects/project_3.1.jpg",
         "/images/personal-projects/project_3.2.jpg"
       ],
-      technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
+      technologies: ["Next.js", "MySQL", "Tailwind CSS"],
     }
   ];
 
